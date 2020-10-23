@@ -7,8 +7,11 @@
       </ul>
       Title: <input type="text" v-model="newMovieTitle" />
       Year: <input type="text" v-model="newMovieYear" />
-      Plot: <input type="text" v-model="newMoviePlot" />
+      <div>
+      Plot: <input type="text" class="form-control" v-model="newMoviePlot">
+      <small>{{ 100 - newMoviePlot.length }} characters remaining</small> 
       <input type="submit" value="Create" />
+      </div>
     </form>
   </div>
 </template>
